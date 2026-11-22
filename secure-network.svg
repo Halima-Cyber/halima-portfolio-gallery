@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Secure Network Design</title>
+  <desc id="desc">A central shield and padlock protecting connected server, laptop, workstation, mobile phone and router devices.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24104f"/>
+      <stop offset="0.55" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#160934" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <style>
+    .lbl { font: 700 11px "Segoe UI", Arial, sans-serif; letter-spacing: 1.6px; fill: #e9d5ff; }
+    .badge { font: 700 11px "Segoe UI", Arial, sans-serif; letter-spacing: 2px; fill: #ffffff; }
+  </style>
+
+  <!-- background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <circle cx="100" cy="60" r="150" fill="#c4b5fd" opacity="0.10"/>
+  <circle cx="760" cy="460" r="190" fill="#ffffff" opacity="0.05"/>
+
+  <!-- network links -->
+  <g fill="none" stroke="#e9d5ff" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="7 7" stroke-linecap="round">
+    <path d="M356 206 L208 142"/>
+    <path d="M446 206 L598 132"/>
+    <path d="M340 268 L204 296"/>
+    <path d="M462 280 L643 304"/>
+    <path d="M400 352 L400 392"/>
+  </g>
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="208" cy="142" r="4"/>
+    <circle cx="598" cy="132" r="4"/>
+    <circle cx="204" cy="296" r="4"/>
+    <circle cx="643" cy="304" r="4"/>
+    <circle cx="400" cy="392" r="4"/>
+  </g>
+
+  <!-- security core -->
+  <circle cx="400" cy="262" r="100" fill="#c4b5fd" opacity="0.35" filter="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="342" y="140" width="116" height="28" rx="14" fill="#ffffff" fill-opacity="0.16" stroke="#e9d5ff" stroke-opacity="0.6"/>
+    <text class="badge" x="400" y="159" text-anchor="middle">FIREWALL</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M400 174 L462 197 V261 C462 307 435 337 400 352 C365 337 338 307 338 261 V197 Z" fill="url(#shield)" stroke="#c4b5fd" stroke-width="3"/>
+    <path d="M388 252 V242 A12 12 0 0 1 412 242 V252" fill="none" stroke="#5b21b6" stroke-width="7" stroke-linecap="round"/>
+    <rect x="380" y="250" width="40" height="38" rx="8" fill="#5b21b6"/>
+    <circle cx="400" cy="266" r="4.5" fill="#ffffff"/>
+    <rect x="397.5" y="268" width="5" height="10" rx="2.5" fill="#ffffff"/>
+  </g>
+
+  <!-- server -->
+  <g filter="url(#shadow)">
+    <rect x="95" y="72" width="110" height="26" rx="7" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7"/>
+    <rect x="95" y="104" width="110" height="26" rx="7" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7"/>
+    <rect x="95" y="136" width="110" height="26" rx="7" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7"/>
+    <g fill="#a7f3d0">
+      <circle cx="111" cy="85" r="3.5"/>
+      <circle cx="111" cy="117" r="3.5"/>
+      <circle cx="111" cy="149" r="3.5"/>
+    </g>
+    <g stroke="#ffffff" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+      <path d="M126 85H188"/>
+      <path d="M126 117H188"/>
+      <path d="M126 149H188"/>
+    </g>
+  </g>
+  <text class="lbl" x="150" y="182" text-anchor="middle">SERVER</text>
+
+  <!-- workstation -->
+  <g filter="url(#shadow)">
+    <rect x="598" y="66" width="114" height="76" rx="8" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7"/>
+    <rect x="607" y="75" width="96" height="55" rx="4" fill="#1f0f45" fill-opacity="0.55"/>
+    <path d="M627 108 l10 -14 9 10 12 -18" fill="none" stroke="#c4b5fd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="647" y="142" width="16" height="14" fill="#ddd6fe"/>
+    <rect x="624" y="156" width="62" height="7" rx="3.5" fill="#ede9fe"/>
+  </g>
+  <text class="lbl" x="655" y="182" text-anchor="middle">WORKSTATION</text>
+
+  <!-- laptop client -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="264" width="102" height="64" rx="7" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7"/>
+    <rect x="108" y="272" width="86" height="48" rx="3" fill="#1f0f45" fill-opacity="0.55"/>
+    <g stroke="#c4b5fd" stroke-opacity="0.8" stroke-width="2.5" stroke-linecap="round">
+      <path d="M117 283h34"/>
+      <path d="M117 291h52"/>
+      <path d="M117 299h26"/>
+    </g>
+    <path d="M88 328H214L224 341H78Z" fill="#ede9fe"/>
+    <rect x="142" y="332" width="18" height="4" rx="2" fill="#a78bfa"/>
+  </g>
+  <text class="lbl" x="150" y="370" text-anchor="middle">CLIENT</text>
+
+  <!-- mobile device -->
+  <g filter="url(#shadow)">
+    <rect x="644" y="254" width="62" height="114" rx="13" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7" stroke-width="2"/>
+    <rect x="651" y="262" width="48" height="96" rx="7" fill="#1f0f45" fill-opacity="0.6"/>
+    <rect x="666" y="265" width="18" height="4" rx="2" fill="#c4b5fd" fill-opacity="0.7"/>
+    <path d="M671 298v-4a4 4 0 0 1 8 0v4" fill="none" stroke="#c4b5fd" stroke-width="2.5"/>
+    <rect x="668" y="297" width="14" height="13" rx="3" fill="#c4b5fd"/>
+    <rect x="665" y="352" width="20" height="3" rx="1.5" fill="#c4b5fd"/>
+  </g>
+  <text class="lbl" x="675" y="386" text-anchor="middle">MOBILE</text>
+
+  <!-- router -->
+  <g filter="url(#shadow)">
+    <rect x="350" y="368" width="8" height="30" rx="4" fill="#e9d5ff" fill-opacity="0.8"/>
+    <rect x="442" y="368" width="8" height="30" rx="4" fill="#e9d5ff" fill-opacity="0.8"/>
+    <rect x="330" y="394" width="140" height="46" rx="11" fill="url(#glass)" stroke="#e9d5ff" stroke-opacity="0.7" stroke-width="2"/>
+    <circle cx="356" cy="417" r="4" fill="#a7f3d0"/>
+    <circle cx="379" cy="417" r="4" fill="#c4b5fd"/>
+    <circle cx="402" cy="417" r="4" fill="#a7f3d0"/>
+    <circle cx="425" cy="417" r="4" fill="#c4b5fd"/>
+  </g>
+  <text class="lbl" x="400" y="462" text-anchor="middle">ROUTER</text>
+</svg>

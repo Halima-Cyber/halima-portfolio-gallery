@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Database Design</title>
+  <desc id="desc">An educational entity relationship diagram with Users, Projects and Skills tables connected by one-to-many links.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24104f"/>
+      <stop offset="0.55" stop-color="#4c1d95"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#160934" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .th { font: 700 14px "Segoe UI", Arial, sans-serif; letter-spacing: 1.4px; fill: #ffffff; }
+    .fld { font: 600 13px "Segoe UI", Arial, sans-serif; fill: #3d1a78; }
+    .typ { font: 11px "Segoe UI", Arial, sans-serif; fill: #8b7aa8; }
+    .key { font: 700 10px "Segoe UI", Arial, sans-serif; fill: #6d28d9; }
+    .rel { font: 700 11px "Segoe UI", Arial, sans-serif; fill: #2b1359; }
+    .cap { font: 700 14px "Segoe UI", Arial, sans-serif; letter-spacing: 2px; fill: #ffffff; }
+  </style>
+
+  <!-- background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <circle cx="740" cy="40" r="160" fill="#c4b5fd" opacity="0.09"/>
+  <circle cx="60" cy="470" r="180" fill="#ffffff" opacity="0.05"/>
+
+  <!-- caption -->
+  <g stroke="#e9d5ff" stroke-opacity="0.75" stroke-width="2" fill="none">
+    <ellipse cx="80" cy="55" rx="20" ry="7"/>
+    <path d="M60 55v16c0 4 9 7 20 7s20-3 20-7V55"/>
+    <path d="M60 71v16c0 4 9 7 20 7s20-3 20-7V71"/>
+  </g>
+  <text class="cap" x="114" y="72">ER MODEL</text>
+
+  <!-- relationships -->
+  <g fill="none" stroke="#ede9fe" stroke-opacity="0.7" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round">
+    <path d="M280 190 L335 165"/>
+    <path d="M555 235 L655 295"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="280" cy="190" r="4"/>
+    <circle cx="335" cy="165" r="4"/>
+    <circle cx="555" cy="235" r="4"/>
+    <circle cx="655" cy="295" r="4"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="282" y="144" width="54" height="22" rx="11" fill="#a78bfa"/>
+    <text class="rel" x="309" y="159" text-anchor="middle">1 : N</text>
+    <rect x="608" y="256" width="54" height="22" rx="11" fill="#a78bfa"/>
+    <text class="rel" x="635" y="271" text-anchor="middle">1 : N</text>
+  </g>
+
+  <!-- USERS table -->
+  <g filter="url(#shadow)">
+    <rect x="55" y="125" width="225" height="160" rx="16" fill="#ffffff"/>
+    <path d="M55 141a16 16 0 0 1 16-16h193a16 16 0 0 1 16 16v25H55z" fill="#5b21b6"/>
+    <text class="th" x="73" y="157">USERS</text>
+    <rect x="55" y="166" width="225" height="30" fill="#faf8ff"/>
+    <rect x="55" y="226" width="225" height="30" fill="#faf8ff"/>
+    <rect x="55" y="256" width="225" height="29" fill="#faf8ff"/>
+    <text class="fld" x="73" y="186">id</text>
+    <text class="typ" x="214" y="186" text-anchor="end">INT</text>
+    <rect x="222" y="175" width="42" height="17" rx="8.5" fill="#ede9fe"/>
+    <text class="key" x="243" y="187" text-anchor="middle">PK</text>
+    <text class="fld" x="73" y="216">name</text>
+    <text class="typ" x="262" y="216" text-anchor="end">VARCHAR</text>
+    <text class="fld" x="73" y="246">email</text>
+    <text class="typ" x="262" y="246" text-anchor="end">VARCHAR</text>
+    <text class="fld" x="73" y="276">role</text>
+    <text class="typ" x="262" y="276" text-anchor="end">VARCHAR</text>
+  </g>
+
+  <!-- PROJECTS table -->
+  <g filter="url(#shadow)">
+    <rect x="335" y="80" width="235" height="191" rx="16" fill="#ffffff"/>
+    <path d="M335 96a16 16 0 0 1 16-16h203a16 16 0 0 1 16 16v25H335z" fill="#5b21b6"/>
+    <text class="th" x="353" y="112">PROJECTS</text>
+    <rect x="335" y="121" width="235" height="30" fill="#faf8ff"/>
+    <rect x="335" y="181" width="235" height="30" fill="#faf8ff"/>
+    <rect x="335" y="241" width="235" height="30" fill="#faf8ff"/>
+    <text class="fld" x="353" y="141">id</text>
+    <text class="typ" x="494" y="141" text-anchor="end">INT</text>
+    <rect x="502" y="130" width="42" height="17" rx="8.5" fill="#ede9fe"/>
+    <text class="key" x="523" y="142" text-anchor="middle">PK</text>
+    <text class="fld" x="353" y="171">user_id</text>
+    <text class="typ" x="494" y="171" text-anchor="end">INT</text>
+    <rect x="502" y="160" width="42" height="17" rx="8.5" fill="#ddd6fe"/>
+    <text class="key" x="523" y="172" text-anchor="middle">FK</text>
+    <text class="fld" x="353" y="201">title</text>
+    <text class="typ" x="552" y="201" text-anchor="end">VARCHAR</text>
+    <text class="fld" x="353" y="231">status</text>
+    <text class="typ" x="552" y="231" text-anchor="end">VARCHAR</text>
+    <text class="fld" x="353" y="261">created_at</text>
+    <text class="typ" x="552" y="261" text-anchor="end">DATE</text>
+  </g>
+
+  <!-- SKILLS table -->
+  <g filter="url(#shadow)">
+    <rect x="555" y="295" width="200" height="150" rx="16" fill="#ffffff"/>
+    <path d="M555 311a16 16 0 0 1 16-16h168a16 16 0 0 1 16 16v25H555z" fill="#5b21b6"/>
+    <text class="th" x="573" y="326">SKILLS</text>
+    <rect x="555" y="336" width="200" height="30" fill="#faf8ff"/>
+    <rect x="555" y="396" width="200" height="29" fill="#faf8ff"/>
+    <text class="fld" x="573" y="356">id</text>
+    <text class="typ" x="694" y="356" text-anchor="end">INT</text>
+    <rect x="702" y="345" width="42" height="17" rx="8.5" fill="#ede9fe"/>
+    <text class="key" x="723" y="357" text-anchor="middle">PK</text>
+    <text class="fld" x="573" y="386">project_id</text>
+    <text class="typ" x="694" y="386" text-anchor="end">INT</text>
+    <rect x="702" y="375" width="42" height="17" rx="8.5" fill="#ddd6fe"/>
+    <text class="key" x="723" y="387" text-anchor="middle">FK</text>
+    <text class="fld" x="573" y="416">name</text>
+    <text class="typ" x="737" y="416" text-anchor="end">VARCHAR</text>
+  </g>
+</svg>

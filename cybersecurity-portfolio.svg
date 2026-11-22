@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Cybersecurity Portfolio Website</title>
+  <desc id="desc">A browser window mockup of a cybersecurity portfolio showing security badges, skill bars, a shield and a terminal panel.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24104f"/>
+      <stop offset="0.55" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#160934" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .chip { font: 700 10px "Segoe UI", Arial, sans-serif; letter-spacing: 1px; fill: #5b21b6; }
+    .slab { font: 700 10px "Segoe UI", Arial, sans-serif; fill: #6d28d9; }
+    .pct { font: 700 10px "Segoe UI", Arial, sans-serif; fill: #8b5cf6; }
+    .url { font: 10px "Segoe UI", Arial, sans-serif; letter-spacing: 1.2px; fill: #ffffff; opacity: 0.85; }
+    .code { font: 12px Consolas, Menlo, monospace; }
+  </style>
+
+  <!-- background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <circle cx="90" cy="450" r="170" fill="#c4b5fd" opacity="0.10"/>
+  <circle cx="730" cy="50" r="150" fill="#ffffff" opacity="0.05"/>
+
+  <!-- browser window -->
+  <g filter="url(#shadow)">
+    <rect x="66" y="58" width="668" height="384" rx="18" fill="#f8f6ff" stroke="#c4b5fd" stroke-width="2"/>
+    <path d="M66 76a18 18 0 0 1 18-18h632a18 18 0 0 1 18 18v26H66z" fill="#5b21b6"/>
+  </g>
+  <circle cx="92" cy="80" r="6" fill="#ddd6fe"/>
+  <circle cx="112" cy="80" r="6" fill="#c4b5fd"/>
+  <circle cx="132" cy="80" r="6" fill="#a78bfa"/>
+  <rect x="168" y="70" width="430" height="21" rx="10.5" fill="#ffffff" fill-opacity="0.18"/>
+  <path d="M181 81v-3a4 4 0 0 1 8 0v3" fill="none" stroke="#e9d5ff" stroke-width="2"/>
+  <rect x="179" y="80" width="12" height="9" rx="2" fill="#e9d5ff"/>
+  <text class="url" x="200" y="85">PORTFOLIO / HOME</text>
+
+  <!-- left content -->
+  <rect x="96" y="124" width="152" height="24" rx="12" fill="#ede9fe"/>
+  <text class="chip" x="172" y="140" text-anchor="middle">CYBERSECURITY</text>
+
+  <text x="96" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#2b1359">SECURE</text>
+  <text x="96" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#7c3aed">BY DESIGN</text>
+  <rect x="96" y="246" width="215" height="8" rx="4" fill="#c4b5fd"/>
+  <rect x="96" y="262" width="165" height="8" rx="4" fill="#ddd6fe"/>
+
+  <rect x="96" y="286" width="92" height="24" rx="12" fill="#ede9fe"/>
+  <text class="chip" x="142" y="302" text-anchor="middle">NETWORK+</text>
+  <rect x="196" y="286" width="96" height="24" rx="12" fill="#ede9fe"/>
+  <text class="chip" x="244" y="302" text-anchor="middle">SECURITY+</text>
+  <rect x="300" y="286" width="68" height="24" rx="12" fill="#ede9fe"/>
+  <text class="chip" x="334" y="302" text-anchor="middle">ETHICS</text>
+
+  <text class="slab" x="96" y="338">NETWORKING</text>
+  <text class="pct" x="306" y="338" text-anchor="end">85%</text>
+  <rect x="96" y="344" width="210" height="7" rx="3.5" fill="#ede9fe"/>
+  <rect x="96" y="344" width="178" height="7" rx="3.5" fill="#7c3aed"/>
+
+  <text class="slab" x="96" y="366">SECURITY</text>
+  <text class="pct" x="306" y="366" text-anchor="end">90%</text>
+  <rect x="96" y="372" width="210" height="7" rx="3.5" fill="#ede9fe"/>
+  <rect x="96" y="372" width="189" height="7" rx="3.5" fill="#6d28d9"/>
+
+  <text class="slab" x="96" y="394">WEB DEVELOPMENT</text>
+  <text class="pct" x="306" y="394" text-anchor="end">75%</text>
+  <rect x="96" y="400" width="210" height="7" rx="3.5" fill="#ede9fe"/>
+  <rect x="96" y="400" width="157" height="7" rx="3.5" fill="#8b5cf6"/>
+
+  <!-- shield illustration -->
+  <circle cx="570" cy="240" r="86" fill="#a78bfa" opacity="0.3" filter="url(#glow)"/>
+  <path d="M570 150 L628 172 V236 C628 278 602 306 570 318 C538 306 512 278 512 236 V172 Z" fill="url(#shield)" stroke="#5b21b6" stroke-width="3"/>
+  <path d="M558 232v-9a12 12 0 0 1 24 0v9" fill="none" stroke="#5b21b6" stroke-width="6" stroke-linecap="round"/>
+  <rect x="550" y="230" width="40" height="36" rx="8" fill="#5b21b6"/>
+  <circle cx="570" cy="245" r="4.5" fill="#ffffff"/>
+  <rect x="567.5" y="247" width="5" height="9" rx="2.5" fill="#ffffff"/>
+  <circle cx="638" cy="170" r="5" fill="#8b5cf6" opacity="0.7"/>
+  <circle cx="500" cy="290" r="4" fill="#c4b5fd"/>
+
+  <!-- terminal panel -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="336" width="282" height="100" rx="12" fill="#1f0f45"/>
+    <path d="M430 348a12 12 0 0 1 12-12h258a12 12 0 0 1 12 12v10H430z" fill="#2b1359"/>
+    <circle cx="446" cy="346" r="3.5" fill="#a78bfa"/>
+    <circle cx="459" cy="346" r="3.5" fill="#c4b5fd"/>
+    <circle cx="472" cy="346" r="3.5" fill="#ddd6fe"/>
+  </g>
+  <text class="code" x="446" y="380" fill="#a7f3d0">&gt; scan --status</text>
+  <text class="code" x="446" y="402" fill="#c4b5fd">&gt; protection: active</text>
+  <text class="code" x="446" y="424" fill="#ffffff">&gt; secure_</text>
+</svg>
